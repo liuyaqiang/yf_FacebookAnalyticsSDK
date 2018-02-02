@@ -15,7 +15,10 @@ s.author       = { "liuyaqiang" => "344257448@qq.com" }
 
 s.platform     = :ios, '8.0'
 s.source           = { :git => "https://github.com/liuyaqiang/yf_FacebookAnalyticsSDK.git", :tag => "#{s.version}" }
-s.vendored_frameworks = 'Facebook/Bolts.framework','Facebook/FBSDKCoreKit.framework'
+  s.source_files = 'Facebook/Bolts.framework/Headers/*.{h}','Facebook/FBAudienceNetworkBiddingKit.framework/Headers/*.{h}','Facebook/Bolts.framework/Headers/*.{h}','Facebook/FBSDKCoreKit.framework/Headers/*.{h}'
+
+  s.public_header_files = 'Facebook/Bolts.framework/Headers/**/*.{h}','Facebook/FBAudienceNetworkBiddingKit.framework/Headers/*.{h}','Facebook/Bolts.framework/Headers/*.{h}','Facebook/FBSDKCoreKit.framework/Headers/*.{h}'
+
 s.xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
 s.frameworks = 'UIKit', 'AVFoundation', 'Foundation', 'CoreMedia', 'CoreLocation',  'StoreKit', 'MediaPlayer', 'CFNetwork', 'AdSupport', 'ImageIO', 'WebKit', 'AdSupport', 'MobileCoreServices'
 s.libraries = 'z', 'stdc++', 'sqlite3'
